@@ -12,5 +12,6 @@ namespace DisneyQuizAppAPI.Models
         public DbSet<Livello> Livelli { get; set; }
         public DbSet<Utente> Utenti { get; set; }
         public DbSet<Risoluzione> Risoluzioni { get; set; }
+        public DbSet<StatoLivello> StatiLivelli { get; set; }
     }
 }
