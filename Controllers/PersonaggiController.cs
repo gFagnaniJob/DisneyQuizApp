@@ -24,7 +24,7 @@ namespace DisneyQuizAppAPI.Controllers
             var livello = await _context.Livelli.FindAsync(idLivello);
 
             if (livello == null)
-                return BadRequest();
+                return NotFound();
 
             var personaggi = await _context.Personaggi.Where(personaggio => personaggio.IdLivello == livello.ID).ToListAsync();
 

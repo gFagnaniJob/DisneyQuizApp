@@ -23,7 +23,7 @@ namespace DisneyQuizAppAPI.Controllers
         var livello = await _context.Livelli.Where(livello => livello.Numero == numero).FirstOrDefaultAsync();
 
         if (livello == null)
-            return BadRequest();
+            return NotFound();
 
         return livello;
     }

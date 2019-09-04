@@ -24,7 +24,7 @@ namespace DisneyQuizAppAPI.Controllers
             var utente = await _context.Utenti.Where(user => user.Username == username).FirstOrDefaultAsync();
 
             if (utente == null)
-                return BadRequest();
+                return NotFound();
 
             var risoluzioni = await _context.Risoluzioni.Where(risoluzione => risoluzione.IdGiocatore == utente.Id).ToListAsync();
 
